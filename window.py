@@ -43,9 +43,10 @@ window.connect("destroy", lambda q: Gtk.main_quit())
 grid = Gtk.Grid()
 window.add(grid)
 
+min_inicial = [-10,-10,-10,-10,-10,-10]
 max_inicial = [10,10,10,10,10,10]
 for i in range(6):
-    adj = Gtk.Adjustment(0,0,max_inicial[i], 1, 10, 0)
+    adj = Gtk.Adjustment(0,min_inicial[i], max_inicial[i], 1, 10, 0)
     adj.tipo = i
     adj.connect("value-changed", replot)
     scale = Gtk.Scale(orientation=Gtk.Orientation.HORIZONTAL, adjustment=adj)
