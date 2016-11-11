@@ -6,7 +6,7 @@ import random
 from matplotlib.backends.backend_gtk3cairo import FigureCanvasGTK3Cairo as FigureCanvas
 import cinematica_inversa as ci
 from scipy.optimize import fsolve
-print("HOLA")
+
 def add_mark(button):
     value = scale.get_value()
     scale.add_mark(value, Gtk.PositionType.LEFT, "Mark")
